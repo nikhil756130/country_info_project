@@ -1,0 +1,22 @@
+
+[
+    {
+        "name": "Belgium",
+        "flag": "https://restcountries.com/v3.1/data/be.svg",
+        "population": 11319511,
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "capital": "Brussels",
+        "languages": ["Dutch", "French", "German"]
+    },
+    {
+        "name": "Germany",
+        "flag": "https://restcountries.com/v3.1/data/de.svg",
+        "population": 83240525,
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "capital": "Berlin",
+        "languages": ["German"]
+    }
+]
+    

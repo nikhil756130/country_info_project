@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="countryApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="CountryController">
+
+    <!-- Filter Input -->
+    <input type="text" ng-model="searchQuery" placeholder="Search by name or region...">
+
+    <!-- Country Cards -->
+    <div class="country-card" ng-repeat="country in countries | filter: searchQuery" ng-click="selectCountry(country)">
+        <img ng-src="{{country.flag}}" alt="{{country.name}}">
+        <h2>{{country.name}}</h2>
+        <p>{{country.region}}</p>
+    </div>
+
+    <!-- Country Details Page -->
+    <div class="country-details" ng-if="selectedCountry">
+        <h1>{{selectedCountry.name}}</h1>
+        <img ng-src="{{selectedCountry.flag}}" alt="{{selectedCountry.name}}">
+        <p>Population: {{selectedCountry.population}}</p>
+        <p>Capital: {{selectedCountry.capital}}</p>
+        <p>Subregion: {{selectedCountry.subregion}}</p>
+        <p>Languages: {{selectedCountry.languages.join(', ')}}</p>
+        <button ng-click="goBack()">Back</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+    
